@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Duck Video Grabber">
+  <defs>
+    <!-- badge uses the app's surface tones (hsl 220 10%, 16% to 10%) -->
+    <linearGradient id="dvg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B2E35"/>
+      <stop offset="1" stop-color="#17191C"/>
+    </linearGradient>
+    <clipPath id="dvg-badge"><circle cx="64" cy="64" r="62"/></clipPath>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#dvg-bg)"/>
+  <g clip-path="url(#dvg-badge)">
+    <!-- bill (accent), tucked behind the head so the face forms its base -->
+    <path d="M70 45C83 44 94 43 100 45C106 47 107 54 103 57C97 60 85 60 70 59Z" fill="#E5204C"/>
+    <!-- head and neck, one silhouette -->
+    <path d="M56 26C69 26 79 35 79 47L79 58C79 67 74 73 72 80C69 94 73 112 84 132L20 132C29 110 32 88 31 64C30 41 40 26 56 26Z" fill="#F1F2F4"/>
+    <circle cx="63" cy="43" r="3.6" fill="#17191C"/>
+  </g>
+  <circle cx="64" cy="64" r="61.25" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1.5"/>
+</svg>

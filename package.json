@@ -1,0 +1,64 @@
+{
+  "name": "duck-video-grabber",
+  "productName": "Duck Video Grabber",
+  "version": "0.1.0",
+  "description": "A simple, modern Windows app for downloading videos with yt-dlp.",
+  "author": "Duck Box",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "electron": "^33.0.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.duckbox.duckvideograbber",
+    "productName": "Duck Video Grabber",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "cookies.js",
+      "updater.js",
+      "src/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Duck Video Grabber",
+      "artifactName": "Duck-Video-Grabber-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "Duck-Video-Grabber-${version}-portable.exe"
+    }
+  }
+}

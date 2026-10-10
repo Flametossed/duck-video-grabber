@@ -1,0 +1,73 @@
+/* Design tokens: colours, shape, motion and type. Everything else reads these. */
+
+/* Inter: a clean, slightly squared typeface. */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('./fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+}
+
+:root {
+  /* Surfaces */
+  --surface-h: 220deg;
+  --surface-s: 10%;
+  --surface-very-dim: hsl(var(--surface-h), var(--surface-s), 4%);
+  --surface-dim: hsl(var(--surface-h), var(--surface-s), 8%);
+  --surface: hsl(var(--surface-h), var(--surface-s), 10%);
+  --surface-raised: hsl(var(--surface-h), var(--surface-s), 14%);
+  --surface-raised-2: hsl(var(--surface-h), var(--surface-s), 16%);
+
+  /* Text and emphasis */
+  --text: hsla(0, 0%, 100%, .8);
+  --text-muted: hsla(0, 0%, 100%, .6);
+  --text-inactive: hsl(216, 10%, 28%);
+  --highlight: #fff;
+  --accent: #e5204c;
+  --link: hsl(217, 77%, 54%);
+  --warning: hsl(48, 80%, 46%);
+  --error: hsl(0, 89%, 15%);
+
+  /* Shape and depth */
+  --radius-sm: .4rem;
+  --radius-lg: 1rem;
+  --border-subtle: hsla(216, 5%, 73%, .2);
+  --shadow: 0 4px 7px hsla(0, 0%, 0%, .25);
+
+  /* Motion */
+  --ease-soft: cubic-bezier(.25, .8, .25, 1);
+  --ease-drawer: cubic-bezier(.32, .72, 0, 1);
+
+  /* Layout */
+  --sidebar-width: 7rem;
+  --bottombar-height: 7rem;
+
+  color-scheme: dark;
+}
+
+:root[data-theme='amoled'] {
+  --surface-s: 5%;
+  --surface-very-dim: hsl(var(--surface-h), var(--surface-s), 4%);
+  --surface-dim: hsl(var(--surface-h), var(--surface-s), 3%);
+  --surface: #000;
+  --surface-raised: hsl(var(--surface-h), var(--surface-s), 5%);
+  --surface-raised-2: hsl(var(--surface-h), var(--surface-s), 8%);
+  --highlight: #e0e0e0;
+  --accent: #da0101;
+}
+
+/* One fixed root size. Windows display scaling sizes everything; the app has no zoom of its own. */
+html { font-size: 48%; }
+
+body {
+  font-family: 'Inter Variable', system-ui, sans-serif;
+  background: var(--surface);
+  color: var(--text);
+}
+
+*:focus-visible {
+  outline: none;
+  border-radius: .5rem;
+  box-shadow: inset 0 0 0 .4rem var(--link);
+}
