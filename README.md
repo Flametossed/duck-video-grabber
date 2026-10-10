@@ -151,6 +151,10 @@ The app has no zoom setting of its own. Its size follows Windows display scaling
 - Only one previous version of each tool is kept
 - The builds are not code-signed
 
+## Licence
+
+[MIT](LICENSE). Bundled and downloaded third-party software keeps its own licence (see below).
+
 ## Third-party software
 
 The app bundles the [Inter](https://rsms.me/inter/) typeface and a few icons from [Lucide](https://lucide.dev/). It downloads [yt-dlp](https://github.com/yt-dlp/yt-dlp), [ffmpeg](https://ffmpeg.org/) and [Deno](https://deno.com/) from their publishers when it runs. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for their licences.

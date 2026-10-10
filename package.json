@@ -3,7 +3,8 @@
   "productName": "Duck Video Grabber",
   "version": "0.1.0",
   "description": "A simple, modern Windows app for downloading videos with yt-dlp.",
-  "author": "Duck Box",
+  "author": "Flametossed",
+  "license": "MIT",
   "main": "main.js",
   "private": true,
   "scripts": {
